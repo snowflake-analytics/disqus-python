@@ -44,7 +44,7 @@ class Paginator(object):
                 yield result
 
             if results.cursor:
-                more = results.cursor['more']
-                params['cursor'] = results.cursor['id']
+                more = results.cursor['hasNext']
+                params['cursor'] = results.cursor['next']
             else:
                 more = False
